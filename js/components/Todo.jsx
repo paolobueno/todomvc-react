@@ -1,11 +1,11 @@
 import React from 'react';
 
-const completedClass = (todo) => todo.completed ? 'completed' : '';
+const todoClass = (todo) => todo.completed ? 'completed' : '';
 
 export default function Todo (props) {
-	return <li className={completedClass(props.todo)}>
+	return <li className={todoClass(props.todo)}>
 		<div className="view">
-			<input className="toggle" type="checkbox" defaultChecked={props.todo.completed} onChange={props.toggleCompleted} />
+			<input className="toggle" type="checkbox" checked={props.todo.completed} onChange={props.toggleCompleted} />
 			<label>{props.todo.text}</label>
 			<button className="destroy" onClick={props.onDestroy}></button>
 		</div>
