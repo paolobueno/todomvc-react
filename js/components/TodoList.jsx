@@ -1,8 +1,14 @@
 import React from 'react';
 import Todo from './Todo';
-export default function TodoList(props) {
-    var todos = props.todos.map(t => <Todo todo={t} />);
-    return <ul className="todo-list">
-        {todos}
-    </ul>
+export default class TodoList extends React.Component {
+    render() {
+        var todos = this.props.todos.map((t, i) =>
+            <Todo todo={t} key={i}
+                onDestroy={() => this.props.onDestroy(i)}
+                toggleCompleted={() => this.props.onToggle(i)}
+            />);
+        return <ul className="todo-list">
+            {todos}
+        </ul>
+    }
 }
