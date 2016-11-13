@@ -1,7 +1,29 @@
 {
-  "private": true,
+  "name": "todomvc-react",
+  "version": "1.0.0",
+  "description": "Template used for creating [TodoMVC](http://todomvc.com) apps",
+  "main": "index.js",
   "dependencies": {
     "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --host 0.0.0.0 --port $PORT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paolobueno/todomvc-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paolobueno/todomvc-react/issues"
+  },
+  "homepage": "https://github.com/paolobueno/todomvc-react#readme",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }

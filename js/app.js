@@ -1,6 +1,9 @@
-(function (window) {
-	'use strict';
+/**
+ * CSS sheets
+ */
+require('todomvc-common/base.css');
+require('todomvc-app-css/index.css');
+require('../css/app.css');
 
-	// Your starting point. Enjoy the ride!
+require('todomvc-common/base.js');
 
-})(window);
